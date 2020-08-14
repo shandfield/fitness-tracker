@@ -16,6 +16,33 @@ const workoutSummary = {
 };
 renderWorkoutSummary(workoutSummary);
 
+//need a function for when the work out is either cardio or resistance 
+//!I feel like this is set up correctly but I feel like i need something in the ()
+function selectWorkout(){
+    let data = JSON.parse(this.value)
+    console.log(data)
+
+    document
+        .querySelector("#modify")
+        .setAttribute("href", `/exercise?id=${data._id}`)
+
+    renderWorkoutSummary(workoutSummary(
+        data.day,
+        data.totalDuration,
+        data.exercises.length,
+        data.exercises
+    ))
+}
+function changeWorkout(){
+    console.log(this.value)
+    location.href= "/exercise?id=" +this.value
+};
+function WorkoutSummary(day,dur,length){
+            this.date= formateDate(day),
+            this.totalDuration: dur,
+            this.numExercises: length,
+        }
+
 function tallyExercises(exercises){
     return exercises.reduce((acc,curr)=>{
         if (curr.type === "resistance"){
@@ -28,10 +55,8 @@ function tallyExercises(exercises){
         return acc;
     }, {});
     }
-// function changeWorkout(){
-//     console.log(this.value)
-//     location.href = "/exercise?id=" + this.value
-// }
+
+
 function formateDate(date) {
     const options ={
         weekday: "long",
@@ -69,7 +94,7 @@ Object.keys(summary).forEach(key =>{
     container.appendChild(p);
 });
 }
-
+//!need to look into this code more since I know it is to return the new workout summary but want to make sure not repeating myself 
 // function WorkoutSummary(day,dur,len,exer){
 //     return{
 //         date: formateDate(day),
