@@ -4,6 +4,7 @@ Description: This is a project that allows a User to log workouts. This program 
 
 Heroku deploy link: https://pure-beach-44477.herokuapp.com/
 Github link: https://github.com/shandfield/fitness-tracker
+Demo: 
 
 Install: In order to utilize this program the user will need to utilize the terminal to complete installs of packages via npm i or they can just click on the Heroku link. 
 
@@ -17,3 +18,5 @@ Contribution:${answers.contribution}
 Tests: Currently under costruction! Please check back.
 
 Questions: If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
+![main](https://user-images.githubusercontent.com/63683598/90298023-cfe59880-de4d-11ea-8655-40cad3ba880d.png)
+![graphs](https://user-images.githubusercontent.com/63683598/90298030-d1af5c00-de4d-11ea-99f9-8d5ee753613b.png)
