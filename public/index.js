@@ -8,6 +8,4 @@ async function init() {
     } else {
       document.querySelector("#continue-btn").classList.add("d-none")
     }
-  }
-}
-
+  }};
