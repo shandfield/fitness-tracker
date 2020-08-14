@@ -10,3 +10,5 @@ router.get("/stats", (req, res) => {
 });
 
 module.exports = router;
+
+//created a view file to make it easier to see where the routes are going for the stats and the exercise html links
