@@ -3,8 +3,10 @@
 Description: This is a project that allows a User to log workouts. This program gives the User a choice to either continue a workout or start a new one. This is ideally creating the database to store the exercises. The User then is prompted to state if the workout was cardio or resistance. Then a series of other questions will prompt based on the selection. The user can then choose to add another workout to this database or be completed. When the User selects completed, they are taken back to the main screen. From their they can make a new workout database, continue with the one they just added to or click on "dashboard" in the top left corner. The dashboard button will take the User to a stats a page that has two different graphs to show their workout data. 
 
 Heroku deploy link: https://pure-beach-44477.herokuapp.com/
+
 Github link: https://github.com/shandfield/fitness-tracker
-Demo: 
+
+Demo video link: https://drive.google.com/file/d/1IiYHON4CSp-DolkQAFho-Jrk4KMnxC67/view
 
 Install: In order to utilize this program the user will need to utilize the terminal to complete installs of packages via npm i or they can just click on the Heroku link. 
 
