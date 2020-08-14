@@ -10,8 +10,8 @@ const Workout = require("../models/workout");
     })
 
     //this will post new exercise data into workout db
-    router.post("/api/workouts/:id", ({ body }, res)=>{
-        Workout.findByIdAndUpdate(params.id, {$push: {exercises: body}},{new:true})    
+    router.put("/api/workouts/:id", ({ params,body }, res)=>{
+        Workout.findOneAndUpdate({_id: params.id}, {$push: {exercises: body}},{new:true, runValidators: true})    
         .then(dbWorkout => {res.json(dbWorkout)})
         .catch(err => {res.json(err)})
     });
@@ -22,8 +22,8 @@ const Workout = require("../models/workout");
         .catch(err => {res.json(err)})
     });
     //this is to find the date range for the workouts
-    router.get("/api/workouts/range", ({query}, res)=>{
-        Workout.find({ day: {$gte: query.start, $lte: query.end}})
+    router.get("/api/workouts/range", (req, res)=>{
+        Workout.find({})
         .then(dbWorkouts => {res.json(dbWorkouts)})
         .catch(err => res.json(err))
     });
