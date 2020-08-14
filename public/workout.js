@@ -18,6 +18,12 @@ renderWorkoutSummary(workoutSummary);
 
 //need a function for when the work out is either cardio or resistance 
 //!I feel like this is set up correctly but I feel like i need something in the ()
+renderWorkoutSummary(workoutSummary(
+    lastWorkout.day,
+    lastWorkout.totalDuration,
+    lastWorkout.exercises.length,
+    lastWorkout.exercises
+))
 function selectWorkout(){
     let data = JSON.parse(this.value)
     console.log(data)
@@ -37,11 +43,12 @@ function changeWorkout(){
     console.log(this.value)
     location.href= "/exercise?id=" +this.value
 };
+
 function WorkoutSummary(day,dur,length){
             this.date= formateDate(day),
-            this.totalDuration: dur,
-            this.numExercises: length,
-        }
+            this.totalDuration= dur,
+            this.numExercises= length
+};
 
 function tallyExercises(exercises){
     return exercises.reduce((acc,curr)=>{
@@ -95,13 +102,14 @@ Object.keys(summary).forEach(key =>{
 });
 }
 //!need to look into this code more since I know it is to return the new workout summary but want to make sure not repeating myself 
-// function WorkoutSummary(day,dur,len,exer){
-//     return{
-//         date: formateDate(day),
-//         totalDuration: dur,
-//         numExercises: len,
-//         ...tallyExercises(exer)
-//     }
+function WorkoutSummary(day,dur,len,exer){
+    return{
+        date: formateDate(day),
+        totalDuration: dur,
+        numExercises: len,
+        ...tallyExercises(exer)
+    }
+}
 }
 
 init();
