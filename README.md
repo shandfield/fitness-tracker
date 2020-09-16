@@ -14,7 +14,7 @@ Usage: For school purposes at this time, with further development it will be use
 
 License: /github/license/:shandfield/note-taker
 
-Contribution:${answers.contribution} 
+Contribution: 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 Tests: Currently under costruction! Please check back.
